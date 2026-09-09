@@ -1,0 +1,67 @@
+export const skills: skillRecord[] = [
+  {
+    id: "1",
+    title: "Semantic Web Search",
+    slug: "semantic-web-search",
+    description:
+      "Perform semantic, context-aware web searches and synthesize answers from the top results.",
+    category: "Research",
+    tags: ["web", "search", "agents"],
+    installCommand: "npx skill-cli install semantic-web-search",
+    createdAt: "2026-09-05T10:00:00Z",
+    authorClerkId: "user_2mK...",
+    authorEmail: "ada@lovelace.dev",
+  },
+  {
+    id: "2",
+    title: "SQL Schema Mapper",
+    slug: "sql-schema-mapper",
+    description:
+      "Introspect a database and produce a normalized, commented schema diagram with relation hints.",
+    category: "Database",
+    tags: ["sql", "schema", "erd"],
+    installCommand: "npx skill-cli install sql-schema-mapper",
+    createdAt: "2026-09-06T09:30:00Z",
+    authorClerkId: "user_9qL...",
+    authorEmail: "bob@tabular.io",
+  },
+  {
+    id: "3",
+    title: "Code Review Bot",
+    slug: "code-review-bot",
+    description:
+      "Review pull requests for correctness, security risks, and style; post inline suggestions.",
+    category: "Engineering",
+    tags: ["review", "github", "security"],
+    installCommand: "npx skill-cli install code-review-bot",
+    createdAt: "2026-09-07T14:12:00Z",
+    authorClerkId: null,
+    authorEmail: "carol@gitflow.dev",
+  },
+  {
+    id: "4",
+    title: "Meeting Minutes Extractor",
+    slug: "meeting-minutes-extractor",
+    description:
+      "Turn raw meeting transcripts into structured action items, decisions, and owner assignments.",
+    category: "Productivity",
+    tags: ["transcript", "minutes", "automation"],
+    installCommand: "npx skill-cli install meeting-minutes-extractor",
+    createdAt: "2026-09-07T16:45:00Z",
+    authorClerkId: "user_4rT...",
+    authorEmail: null,
+  },
+  {
+    id: "5",
+    title: "Anomaly Detection Reporter",
+    slug: "anomaly-detection-reporter",
+    description:
+      "Train a lightweight model on a metric series and emit alerts with root-cause hypotheses.",
+    category: "Data Science",
+    tags: ["anomaly", "timeseries", "alerting"],
+    installCommand: "npx skill-cli install anomaly-detection-reporter",
+    createdAt: "2026-09-08T08:20:00Z",
+    authorClerkId: "user_7sX...",
+    authorEmail: "erin@observablehq.dev",
+  },
+];

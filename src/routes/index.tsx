@@ -1,14 +1,53 @@
-import { createFileRoute } from '@tanstack/react-router'
+import SkillCard from "#/components/SkillCard";
+import { skills } from "#/lib/dummySkills";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { Terminal } from "lucide-react";
 
-export const Route = createFileRoute('/')({ component: Home })
+export const Route = createFileRoute("/")({ component: Home });
 
 function Home() {
   return (
-    <div className="p-8">
-      <h1 className="text-4xl font-bold">Welcome to TanStack Start</h1>
-      <p className="mt-4 text-lg">
-        Edit <code>src/routes/index.tsx</code> to get started.
-      </p>
+    <div id="home">
+      <section className="hero">
+        <div className="copy">
+          <h1>
+            The Registry for <br />
+            <span className="text-gradient">Agentic Intelligence</span>
+          </h1>
+          <p>
+            A high-performance registry for procedural agent skills. Discover, publish, and operate
+            reusable agent capabilities from a route-driven workspace.
+          </p>
+        </div>
+        <div className="actions">
+          <Link to="/skills" className="btn-primary">
+            <Terminal size={18} />
+            <span>Browse Registry</span>
+          </Link>
+          <Link to="/skills/new" className="btn-secondary">
+            Publish Skill
+          </Link>
+        </div>
+      </section>
+      <section className="latest">
+        <div className="space-y-2">
+          <h2>
+            Recently Created <span className="text-gradient">Skills</span>
+          </h2>
+          <p>Latest skills loaded from Firestore in descending creation.</p>
+        </div>
+        <div>
+          {skills.length > 0 ? (
+            <div className="skills-grid">
+              {skills.map((skill) => (
+                <SkillCard key={skill.id} {...skill} />
+              ))}
+            </div>
+          ) : (
+            <p>No Skills have been created yet.</p>
+          )}{" "}
+        </div>
+      </section>
     </div>
-  )
+  );
 }
