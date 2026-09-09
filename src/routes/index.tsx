@@ -15,7 +15,7 @@ function Home() {
             <span className="text-gradient">Agentic Intelligence</span>
           </h1>
           <p>
-            A high-pertormance registry Tor procedural agent skills. Discover, publish, and operate
+            A high-performance registry for procedural agent skills. Discover, publish, and operate
             reusable agent capabilities from a route-driven workspace.
           </p>
         </div>
