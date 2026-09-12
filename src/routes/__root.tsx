@@ -2,7 +2,7 @@ import { HeadContent, Scripts, createRootRouteWithContext } from "@tanstack/reac
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
 import { TanStackDevtools } from "@tanstack/react-devtools";
 
-import ClerkProvider from "../integrations/clerk/provider";
+import { ClerkProvider } from "@clerk/tanstack-react-start";
 
 import TanStackQueryDevtools from "../integrations/tanstack-query/devtools";
 
@@ -48,17 +48,17 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       </head>
       <body className="wrap-anywhere">
         <div id="root-layout">
-          <header>
-            <div className="frame">
-              <Navbar />
-              <Crosshair />
-              <Crosshair />
-            </div>
-          </header>
-          <main>
-            <div className="frame">{children}</div>
-          </main>
           <ClerkProvider>
+            <header>
+              <div className="frame">
+                <Navbar />
+                <Crosshair />
+                <Crosshair />
+              </div>
+            </header>
+            <main>
+              <div className="frame">{children}</div>
+            </main>
             <TanStackDevtools
               config={{
                 position: "bottom-right",
